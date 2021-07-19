@@ -10,9 +10,6 @@
 
 	<name>weatherapp</name>
 	
-	
-	
-	
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -34,6 +31,14 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudHubDeployment>
+				<username>KR09kumar</username>
+				<password>1116fjfj</password>
+				<environment>Sandbox</environment>
+				<workers>1</workers>
+				<applicationName>WorldTimeZone-services</applicationName>
+				<muleVersion>4.3.0</muleVersion>
+				</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
