@@ -36,7 +36,7 @@
 				<password>Kranthi@27</password>
 				<environment>Sandbox</environment>
 				<workers>1</workers>
-				<applicationName>WorldTimeZone-services</applicationName>
+				<applicationName>weatherapp</applicationName>
 				<muleVersion>4.3.0</muleVersion>
 				</cloudHubDeployment>
 				</configuration>
