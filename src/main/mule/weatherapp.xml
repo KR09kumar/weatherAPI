@@ -4,14 +4,14 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="6b0f0553-e79e-43b6-9e5b-b52969aaa921" basePath="/timeZone">
-		<http:listener-connection host="0.0.0.0" port="8081" />
-	</http:listener-config>
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="3cf6d4b4-3999-4107-b608-aaeef035ef44" basePath="/api/timezone" >
 		<http:request-connection host="worldtimeapi.org" />
 	</http:request-config>
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="290197dc-d31e-4008-b1bc-f99142b16d52" basePath="/timeZone" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
 	<flow name="weatherappFlow" doc:id="ec8231b7-371a-4304-a067-50aa26fc4d4e" >
-		<http:listener doc:name="Listener" doc:id="6fcfada9-5c8a-419a-bb2a-84daa0daba0a" config-ref="HTTP_Listener_config" path="/{region}/{city}"/>
+		<http:listener doc:name="Listener" doc:id="4a6c7a1b-4d9e-4a90-bbc2-e58c35de828f" config-ref="HTTP_Listener_config" path="/{region}/{city}"/>
 		<http:request method="GET" doc:name="Request" doc:id="67c2dca2-5efd-4a23-bf84-ecf758f1a53e" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
 			<http:uri-params ><![CDATA[#[output application/java
 ---
