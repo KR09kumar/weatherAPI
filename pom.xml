@@ -32,8 +32,8 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
-				<username>KR09kumar</username>
-				<password>1116fjfj</password>
+				<username>kranthi2794</username>
+				<password>Kranthi@27</password>
 				<environment>Sandbox</environment>
 				<workers>1</workers>
 				<applicationName>WorldTimeZone-services</applicationName>
